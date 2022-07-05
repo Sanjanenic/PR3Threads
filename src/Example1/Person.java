@@ -2,6 +2,12 @@ package Example1;
 
 public class Person implements Runnable {
 
+    private boolean isRunning =true; //ovo trebam za zaustaviti
+
+    public void requestShutDown(){
+        isRunning=false;
+    }
+
    private String name;
    public Person(String name ){
        this.name=name;
@@ -14,8 +20,8 @@ public class Person implements Runnable {
     @Override
     public void run() {
 
-      //  System.out.println("HELLO " + getName());
-        for(int i =0; i<10; i++){
+
+       while(isRunning){  //-->oder mit vor scchleife un if bedinung isRunning/und else block mit break
             System.out.println(getName() + " "+Thread.currentThread().getName());
             try {
                 Thread.sleep(1000);
