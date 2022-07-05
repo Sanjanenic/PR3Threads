@@ -11,12 +11,6 @@ public class Worker implements Runnable{
     }
 
 
-//    private String data;
-//
-//    public Worker(String data) {
-//        this.data = data;
-//    }
-
     @Override
     public void run() {
 
