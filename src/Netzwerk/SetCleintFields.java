@@ -8,19 +8,19 @@ import java.net.URLConnection;
 public class SetCleintFields {
     public static void main(String[] args) {
 
-        try{
-        URL url = new  URL("https://campus02.at");
-            URLConnection urlConnection= url.openConnection();
+        try {
+            URL url = new URL("https://campus02.at");
+            URLConnection urlConnection = url.openConnection();
 
             System.out.println();
 
             //ovo nisam stigla do krajan
 
 
-
-    } catch (MalformedURLException e) {
-                e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+}
